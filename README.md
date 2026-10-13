@@ -12,15 +12,15 @@ Este proyecto contiene las soluciones de software y algoritmos desarrollados par
 ## Estructura del Repositorio
 Siguiendo el estándar de orden solicitado para la entrega, el proyecto se organiza bajo la siguiente estructura de archivos y carpetas:
 
-mision-orbita/ (Carpeta raíz del proyecto)
-├── README.md (Guía de navegación y presentación - Este archivo)
-├── avance1/ (Carpeta con los códigos fuentes desarrollados en Python)
-ejercicio1_recursos.py (Cálculo de suministros de soporte vital y combustible)
-│   ├── ejercicio2_combustible.py (Verificación de combustible con alertas de margen bajo)
-│   ├── ejercicio3_soporte_tripulacion.py (Evaluación de oxígeno y provisiones)
-│   └── ejercicio4_autorizacion.py (Filtro de seguridad compuesto para el lanzamiento)
-└── documentacion/ (Carpeta destinada al informe ejecutivo del proyecto)
-    └── avance1.pdf (Reporte oficial con casos de prueba y tablas de variables)
+- mision-orbita/ (Carpeta raíz del proyecto)
+- README.md (Guía de navegación y presentación - Este archivo)
+- avance1/ (Carpeta con los códigos fuentes desarrollados en Python)
+- ejercicio1_recursos.py (Cálculo de suministros de soporte vital y combustible)
+- ejercicio2_combustible.py (Verificación de combustible con alertas de margen bajo)
+- ejercicio3_soporte_tripulacion.py (Evaluación de oxígeno y provisiones)
+- ejercicio4_autorizacion.py (Filtro de seguridad compuesto para el lanzamiento)
+- documentacion/ (Carpeta destinada al informe ejecutivo del proyecto)
+- avance1.pdf (Reporte oficial con casos de prueba y tablas de variables)
 
 ## Estándares Técnicos Aplicados
 - Nomenclatura limpia: Uso estricto del formato camelCase para variables simples e intermedias de proceso.
