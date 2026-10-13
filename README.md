@@ -15,7 +15,7 @@ Siguiendo el estándar de orden solicitado para la entrega, el proyecto se organ
 mision-orbita/ (Carpeta raíz del proyecto)
 ├── README.md (Guía de navegación y presentación - Este archivo)
 ├── avance1/ (Carpeta con los códigos fuentes desarrollados en Python)
-│   ├── ejercicio1_recursos.py (Cálculo de suministros de soporte vital y combustible)
+ejercicio1_recursos.py (Cálculo de suministros de soporte vital y combustible)
 │   ├── ejercicio2_combustible.py (Verificación de combustible con alertas de margen bajo)
 │   ├── ejercicio3_soporte_tripulacion.py (Evaluación de oxígeno y provisiones)
 │   └── ejercicio4_autorizacion.py (Filtro de seguridad compuesto para el lanzamiento)
