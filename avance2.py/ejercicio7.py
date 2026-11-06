@@ -25,81 +25,75 @@ collectedSamples = 0
 
 
 print(
-    "Bienvenido a la Misión Orbita #2.\n"
+    "Bienvenido a la Misión Orbita #2.\n\n"
     "A continuación, se presentan las actividades que puede realizar en el planeta.\n"
-    "Cada actividad tiene un costo de energía y provisiones, además de otorgar puntos científicos.\n\n"
-    "Actividad 1: Analizar terreno\n"
-    "Actividad 2: Recolectar muestra\n"
-    "Actividad 3: Realizar observación\n"
-    "Actividad 4: Finalizar exploración\n\n"
-    "Si no tiene suficiente energía o provisiones, no podrá realizar la actividad seleccionada.\n"
+    "Cada actividad tiene un costo de energía y provisiones, además de otorgar puntos científicos.\n"
+    "Si no tiene suficiente energía o provisiones, no podrá realizar la actividad seleccionada y el programa va a finalizar.\n"
 )
 
-energyAvailable = float(input("Cual es la energia diaponible al llegar al destino? "))
-provisionsAvailable = float(input("Cuantas provisiones tienen diaponibles al momento de llegar al destino? "))
+energyAvailable = int (input("Cual es la energia diaponible al llegar al destino? "))
+provisionsAvailable = int (input("Cuantas provisiones tienen diaponibles al momento de llegar al destino? "))
 
 #Ciclo para realizar actividades hasta que el usuario decida salir
-continueChoice = "s"
-while continueChoice.lower() == "s":
+continueChoice = True
+while continueChoice:
 
     #Datos de entrada
-    activity = float(input("Ingrese el número correspondiente de la actividad que desea realizar: "))
+
+    print(
+        "Actividades que puede realizar en el planeta:\n"
+        "Actividad 1: Analizar terreno\n"
+        "Actividad 2: Recolectar muestra\n"
+        "Actividad 3: Realizar observación\n"
+        "Actividad 4: Finalizar exploración\n\n"
+    )
+    activity = int(input("Ingrese el número correspondiente de la actividad que desea realizar: "))
 
     #Verificación de la actividad seleccionada y actualización de los acumuladores
-    activity == 1
+   
     if activity == 1:
         if energyAvailable >= ENERGY_COST_ACT1 and provisionsAvailable >= SUPPLIES_COST_ACT1:
             energyAvailable -= ENERGY_COST_ACT1
             provisionsAvailable -= SUPPLIES_COST_ACT1
             scientificPoints += SCIENTIFIC_POINTS_ACT1
             completedActivities += 1
-            print("Actividad 1 completada. Puntos científicos obtenidos:", SCIENTIFIC_POINTS_ACT1)
+            print("Actividad realizada: Analizar terreno. Puntos obtenidos:", SCIENTIFIC_POINTS_ACT1, "\n")
         else:
-            print("No tiene suficiente energía o provisiones para realizar la actividad 1.")
+            print("Recursos insuficientes para realizar la actividad. La exploración finaliza.")
+            continueChoice = False
 
 
-    activity == 2
-    if activity == 2:
+    elif activity == 2:
         if energyAvailable >= ENERGY_COST_ACT2 and provisionsAvailable >= SUPPLIES_COST_ACT2:
             energyAvailable -= ENERGY_COST_ACT2
             provisionsAvailable -= SUPPLIES_COST_ACT2
             scientificPoints += SCIENTIFIC_POINTS_ACT2
             completedActivities += 1
             collectedSamples += 1
-            print("Actividad 2 completada. Puntos científicos obtenidos:", SCIENTIFIC_POINTS_ACT2)
+            print("Actividad realizada: Recolectar muestra. Puntos obtenidos:", SCIENTIFIC_POINTS_ACT2, "\n")
         else:
-            print("No tiene suficiente energía o provisiones para realizar la actividad 2.")
+            print("Recursos insuficientes para realizar la actividad. La exploración finaliza.")
+            continueChoice = False
 
-    activity == 3
-    if activity == 3:
+    
+    elif activity == 3:
         if energyAvailable >= ENERGY_COST_ACT3 and provisionsAvailable >= SUPPLIES_COST_ACT3:
             energyAvailable -= ENERGY_COST_ACT3
             provisionsAvailable -= SUPPLIES_COST_ACT3
             scientificPoints += SCIENTIFIC_POINTS_ACT3
             completedActivities += 1
-            print("Actividad 3 completada. Puntos científicos obtenidos:", SCIENTIFIC_POINTS_ACT3)
+            print("Actividad realizada: Realizar observación. Puntos obtenidos:", SCIENTIFIC_POINTS_ACT3, "\n")
         else:
-            print("No tiene suficiente energía o provisiones para realizar la actividad 3.")
+            print("Recursos insuficientes para realizar la actividad. La exploración finaliza.")
+            continueChoice = False
 
-    activity == 4
-    if activity == 4:
-        if energyAvailable >= ENERGY_COST_ACT4 and provisionsAvailable >= SUPPLIES_COST_ACT4:
-            energyAvailable -= ENERGY_COST_ACT4
-            provisionsAvailable -= SUPPLIES_COST_ACT4
-            scientificPoints += SCIENTIFIC_POINTS_ACT4
-            completedActivities += 1
-            print("Actividad 4 completada. Puntos científicos obtenidos:", SCIENTIFIC_POINTS_ACT4)
-        else:
-            print("No tiene suficiente energía o provisiones para realizar la actividad 4.")    
+
+    elif activity == 4:
+        print("Exploración finalizada por la tripulación.")
+        continueChoice = False
 
     if activity < 1 or activity > 4:
         print("Actividad inválida. Por favor, seleccione una actividad válida (1-4).")
-    if energyAvailable <= 5 or provisionsAvailable <= 2:
-        print("No tiene suficiente energía o provisiones para continuar con las actividades, su unica opcion es finalizar la exploración, por favor, no continue con el programa.")
-
-
-# Confirmación para continuar o salir del ciclo
-    continueChoice = input("¿Desea realizar otra actividad? (s/n): ")
 
 # Resumen de la exploración
 print("Resumen de la exploración:")
@@ -111,3 +105,13 @@ print(f"Provisiones restantes: {provisionsAvailable} unidades")
 
 
 
+"""
+    if activity < 1 or activity > 4:
+        print("Actividad inválida. Por favor, seleccione una actividad válida (1-4).")
+    if energyAvailable <= 5 or provisionsAvailable <= 2:
+        print("No tiene suficiente energía o provisiones para continuar con las actividades, su unica opcion es finalizar la exploración, por favor, no continue con el programa.")
+
+
+# Confirmación para continuar o salir del ciclo
+    continueChoice = input("¿Desea realizar otra actividad? (s/n): ")
+"""
