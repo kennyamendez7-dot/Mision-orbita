@@ -109,18 +109,5 @@ print(f"Puntos científicos: {scientificPoints}")
 print(f"Energía restante: {energyAvailable} unidades")
 print(f"Provisiones restantes: {provisionsAvailable} unidades")
 
-"""
-{
-    "Actividad 1: Analizar el terreno": {"costoEnergia": 8, "costoProvisiones": 0, "puntosCientificos": 10},
-    "Actividad 2: Recolectar muestras": {"costoEnergia": 12, "costoProvisiones": 2, "puntosCientificos": 20},
-    "Actividad 3: Realizar observacion": {"costoEnergia": 5, "costoProvisiones": 0, "puntosCientificos": 8},
-    "Actividad 4: Fninalizar exploracion": {"costoEnergia": 0, "costoProvisiones": 0, "puntosCientificos": 0},
-}
-
-for actividad, detalles in actividades.items():
-    print(f"{actividad}: Costo de Energia: {detalles['costoEnergia']}, Costo de Provisiones: {detalles['costoProvisiones']}, Puntos Cientificos: {detalles['puntosCientificos']}, ]}")
-    """
-
-
 
 
