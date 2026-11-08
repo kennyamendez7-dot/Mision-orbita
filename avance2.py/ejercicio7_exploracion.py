@@ -1,3 +1,13 @@
+# Archivo: ejercicio7_exploracion.py
+# Curso: SOFT-01 Principios de Programación 1 - Sección SCP0
+# Integrante: Kennya Mendez
+# Fecha: 06/11/2026
+# Versión: 8.0
+# Descripción: Simula las actividades de exploración científica,
+# calcula el consumo de recursos y acumula los puntos científicos.
+
+# ============================================================
+
 # Actividad 1: Analizar terreno
 ENERGY_COST_ACT1 = 8
 SUPPLIES_COST_ACT1 = 0
@@ -103,15 +113,3 @@ print(f"Puntos científicos: {scientificPoints}")
 print(f"Energía restante: {energyAvailable} unidades")
 print(f"Provisiones restantes: {provisionsAvailable} unidades")
 
-
-
-"""
-    if activity < 1 or activity > 4:
-        print("Actividad inválida. Por favor, seleccione una actividad válida (1-4).")
-    if energyAvailable <= 5 or provisionsAvailable <= 2:
-        print("No tiene suficiente energía o provisiones para continuar con las actividades, su unica opcion es finalizar la exploración, por favor, no continue con el programa.")
-
-
-# Confirmación para continuar o salir del ciclo
-    continueChoice = input("¿Desea realizar otra actividad? (s/n): ")
-"""
